@@ -5,16 +5,17 @@ const morgan = require('morgan');
 
 const app = express();
 
-app.use(helmet());  
-app.use(cors());
-app.use(morgan('combined'));
-app.use(express.json());
+app.use(helmet());  // Configuración del middleware Helmet para la seguridad
+app.use(cors()); // Configuración del middleware CORS para permitir solicitudes desde diferentes dominios
+app.use(morgan('combined')); // Configuración del middleware Morgan para el registro de solicitudes
+app.use(express.json()); // Configuración del middleware para analizar el cuerpo de la solicitud como JSON
 
-const routes = require('./routes/index.js')
-app.use('/', routes)
+const routes = require('./routes/index.js');
+app.use('/', routes); // Configuración de las rutas en el punto de entrada '/'
 
 const port = 6000;
 
 app.listen(port, () => {
-  console.log(`Servidor iniciado en el puerto ${port}`);
+  console.log(`Servidor iniciado en el puerto ${port}`); // Mensaje que se muestra cuando el servidor se inicia correctamente
 });
+
