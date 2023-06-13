@@ -13,7 +13,7 @@ app.use(express.json()); // Configuración del middleware para analizar el cuerp
 const routes = require('./routes/index.js');
 app.use('/', routes); // Configuración de las rutas en el punto de entrada '/'
 
-const port = 6000;
+const port = 5000;
 
 app.listen(port, () => {
   console.log(`Servidor iniciado en el puerto ${port}`); // Mensaje que se muestra cuando el servidor se inicia correctamente

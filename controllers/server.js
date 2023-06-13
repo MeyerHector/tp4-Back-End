@@ -1,16 +1,16 @@
-function get() {
+function get(_req, res) {
     res.send('Peticion GET exitosa')
 };
 
-function post() {
+function post(_req, res) {
     res.send('Peticion POST exitosa')
 };
 
-function put() {
+function put(_req, res) {
     res.send('Peticon PUT exitosa')
 };
 
-function deletee() {
+function deletee(_req, res) {
     res.send('Peticion DELETE exitosa')
 }
 
